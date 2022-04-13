@@ -2,7 +2,7 @@
 session_start();
 $user_id = $_SESSION['user_id'];
 include('connect.php');
-if(isset($_POST['title']) && isset($_POST['descriptions'] ) && isset($_POST['genre']) ){
+if(isset($_POST['title']) && isset($_POST['descriptions'] ) && isset($_POST['genre']) && isset($_POST['author']) ){
     $title = $_POST['title'];
     $descriptions = $_POST['descriptions'];
     $author = $_POST['author'];
@@ -12,7 +12,7 @@ if(isset($_POST['title']) && isset($_POST['descriptions'] ) && isset($_POST['gen
         move_uploaded_file($file,$target);
         $postDate = date('Y-m-d');
         $location = 'img/'.$_FILES['image'] ['name'];
-        $query = "INSERT INTO `books`(title, image, descriptions, author, postDate, category_id, user_id) VALUES ('$title','$location','$descriptions','$author','$postDate','$category','$user_id')";
+        $query = "INSERT INTO books (title, image, descriptions, author, postDate, category_id, user_id) VALUES ('$title','$location','$descriptions','$author','$postDate','$category','$user_id')";
 
 
 if(mysqli_query($conn, $query)){

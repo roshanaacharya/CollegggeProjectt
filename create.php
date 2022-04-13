@@ -10,7 +10,7 @@
     $data = mysqli_fetch_assoc($result);
 
     
-    $postQuery = "SELECT * FROM post";
+    $postQuery = "SELECT * FROM books";
     $postResult = mysqli_query($conn, $postQuery);
 
 ?>
@@ -21,23 +21,22 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         </head>
       <body>
-            <?php include('include/nav.php');?>    
+            <?php include('nav.php');?>    
             
             <div class="container">
-             <div class="row">
-            <?php include('include/left-nav.php');?>    
+             <div class="row">   
                <div class="col-8">
                 <table class="table">
                   <th>Title</th>
-                  <th>post Date</th>
                   <th>Author</th>
+                  <th>Postdate</th>
                   <th>Action</th>
                   <?php while ($row = mysqli_fetch_assoc($postResult)){ ?>
                     <tr>
                       <td><?php echo $row ['title']; ?></td>
                       <td><?php echo $row ['author']; ?></td>
                       <td><?php echo $row ['postDate']; ?></td>
-                      <td><a href="update-post.php?id=<?php echo $row ['id'];?>">update</a>| Delete </td>
+                      <td><a href="#">update</a>| Delete </td>
                     </tr>
                     <?php } ?>
                   </table>

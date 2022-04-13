@@ -20,22 +20,22 @@
             <title>Learners padd</title>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         </head>
-      <body>
+      <body style="background-color:#728FCE;">
             <?php include('nav.php');?>    
             
             <div class="container">
-             <div class="row">
+             <div class="row justify-content-md-center">
 
                <div class="col-8">
                 <form method="POST" action="db/create.php" enctype="multipart/form-data">
 
                   <div class="mb-3">
-                    <label for="" class="form-label">Title</label>
+                    <label for="" class="form-label"><h2>Title</h2></label>
                     <input type="text" class="form-control" name="title">
                   </div>
 
                   <div class="mb-3">
-                    <label for="" class="form-label"></label>
+                    <label for="" class="form-label"><h3>Description</h3></label>
                    <textarea id ="news" class="form-control" name="descriptions"></textarea>
                   </div>
 
@@ -54,6 +54,11 @@
                       </select>
                   </div>
                   <hr/>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Author</label>
+                    <input type="text" class="form-control" name="author">
+                  </div>
+                  <br>
                   <button type="submit" class="btn btn-dark">Save</button>
                 </form>
                 <hr>

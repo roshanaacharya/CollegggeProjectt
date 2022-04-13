@@ -23,10 +23,6 @@
             <img class="hero-book1" src="https://image.ibb.co/myb5DA/book1.jpg" alt="Book 1">
             <img class="hero-book3" src="https://image.ibb.co/c7VXtA/book3.jpg" alt="Book 3">
         </div>
-        <div id="btn-block" class="horizontal-block">
-            <a href=""><button class="btn btn-hero">Read <span class="bold-text">Preview</span></button></a>
-            <a href=""><button class="btn btn-hero">Read <span class="bold-text">Series</span></button></a>
-        </div>
     </section>
     <section>
         <h3 class="bold-text uppercase-text">Harry Potter and the Philosopher's Stone</h3>

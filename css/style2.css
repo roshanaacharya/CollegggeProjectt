@@ -112,15 +112,8 @@ section {
 .article-text {
   width: 300px;
   color: var(--article-text);
-  line-height: 1.5;
-  text-align: justify;
-}
-
-.watermark-text {
-  font-family: "Basic", sans-serif;
-  font-size: 10rem;
-  text-align: left;
-  color: var(--watermark-color);
+  line-height: 1;
+  text-align: right;
 }
 
 h1 {
@@ -156,8 +149,8 @@ h5 {
 .cover {
   width: 220px;
   height: auto;
-  justify-self: flex-start;
-  align-self: flex-start;
+  justify-self: right;
+  align-self: right;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -246,6 +239,8 @@ form {
 .btn-read {
   background-color: var(--button-color-book);
   color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
 .btn-send {
@@ -277,20 +272,6 @@ form {
   justify-content: space-evenly;
   width: 400px;
 }
-
-#facebook {
-  grid-column: 2;
-}
-#twitter {
-  grid-column: 3;
-}
-#instagram {
-  grid-column: 4;
-}
-#goodreads {
-  grid-column: 5;
-}
-
 @media (max-height: 650px) {
   section {
     height: 100%;
